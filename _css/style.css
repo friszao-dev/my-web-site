@@ -74,7 +74,7 @@ footer {
     grid-template-columns: 1.1fr .9fr;
     gap: 28px;
 
-    background: url('_fotos/img9460.jpg') center/cover no-repeat;
+    background: url("_fotos/cantando.png") center/cover no-repeat;
     border-radius: var(--radius);
     position: relative;
     color: #fff;
