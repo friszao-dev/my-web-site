@@ -1,4 +1,3 @@
-/* Reset básico */
 body, h1, h2, p, ul {
   margin: 0;
   padding: 0;
@@ -15,9 +14,18 @@ body {
 /* Cabeçalho */
 header {
   background: #1e1e1e;
-  padding: 20px;
+  padding: 5px;
   text-align: center;
   border-bottom: 2px solid #7c0101;
+  background: url(../_fotos/cantando.png) no-repeat center;
+}
+
+/* Estilização da logo */
+header img {
+    height: 200px; /* Altere este valor para o tamanho desejado */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 header h1 {
@@ -66,28 +74,62 @@ footer {
     --radius: 16px;
 }
 
-.hero {
-    max-width: var(--maxw);
-    margin: auto;
-    padding: 64px 20px 48px;
-    display: grid;
-    grid-template-columns: 1.1fr .9fr;
-    gap: 28px;
-
-    background: url("_fotos/cantando.png") center/cover no-repeat;
-    border-radius: var(--radius);
+/* Estilo para a seção de destaque */
+.hero-section {
+    text-align: center;
     position: relative;
-    color: #fff;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.5);
-    border-radius: var(--radius);
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover; /* Altere aqui */
+    filter: brightness(60%);
 }
 
-.hero > * {
+.hero-section h2, .hero-section p {
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    width: 80%;
+}
+
+.cta-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color .3s ease;
+}
+
+/* Botão do WhatsApp */
+.button.whatsapp {
+    background-color: #25D366; /* Cor verde oficial do WhatsApp */
+    color: white;
+}
+
+.button.whatsapp:hover {
+    background-color: #128C7E; /* Uma variação do verde ao passar o mouse */
+}
+
+.button.secondary {
+    background-color: transparent;
+    border: 2px solid #f0f0f0;
+    color: #f0f0f0;
+}
+
+.button.secondary:hover {
+    background-color: #f0f0f0;
+    color: #121212;
 }
